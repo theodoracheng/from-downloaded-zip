@@ -1,0 +1,58 @@
+{
+  "name": "MyStarterKit",
+  "description": "This is one amazing StarterKit",
+  "thumbnailURL": "blueprint/thumbnail.svg",
+  "appIconURL": "blueprint/appicon.svg",
+  "previewURLs": [],
+  "type": "WEB",
+  "tags": [],
+  "checklist": [
+    {
+      "label": "Do this",
+      "link": "https://ibm.com"
+    },
+    {
+      "label": "Do that",
+      "link": "https://ibm.com"
+    }
+  ],
+  "generators": {
+    "node": [
+      "generator-ibm-core-node-express",
+      "generator-ibm-cloud-enablement",
+      "generator-ibm-service-enablement",
+      "generator-usecase-enablement"
+    ],
+    "python": [
+      "generator-core-python-flask",
+      "generator-ibm-cloud-enablement",
+      "generator-ibm-service-enablement",
+      "generator-usecase-enablement"
+    ]
+  },
+  "generatorOptions": {
+    "generator-ibm-core-node-express": {
+      "version": "latest"
+    },
+    "generator-core-python-flask": {
+      "registry": "https://npm-registry.whitewater.ibm.com",
+      "scope": "@arf",
+      "version": "latest"
+    },
+    "generator-ibm-service-enablement": {
+      "version": "latest"
+    },
+    "generator-ibm-cloud-enablement": {
+      "version": "latest"
+    },
+    "generator-usecase-enablement": {
+      "registry": "https://npm-registry.whitewater.ibm.com",
+      "scope": "@arf",
+      "version": "latest"
+    }
+  },
+  "requiredCapabilities": [],
+  "requiredCapabilitiesURLs": {},
+  "servicePlans": {},
+  "email": "cloud@us.ibm.com"
+}

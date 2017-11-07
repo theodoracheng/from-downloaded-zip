@@ -1,0 +1,10 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: ddcao-26sep0910-kube-java
+  buildpack: sdk-for-nodejs
+  command: npm start
+  memory: 512MB
+  domain: mybluemix.net
+  host: ddcao-26sep0910-kube-java
