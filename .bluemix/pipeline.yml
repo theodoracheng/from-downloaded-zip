@@ -22,12 +22,15 @@ stages:
     image_name: ${CHART_NAME}
     script: |-
       #!/bin/bash
+      echo "Modifying Dockerfiles for Swift Kubernetes DevOps Toolchain deployment"
+      echo "RUN cd /swift-project && /swift-utils/tools-utils.sh build release" >> Dockerfile-tools
+      sed -i 's/COPY.*/COPY --from=0 \/swift-project .\/swift-project/' Dockerfile
+      cat Dockerfile >> Dockerfile-tools
+      mv Dockerfile-tools Dockerfile
 
       echo "source the container_build script to run in current shell"
       SCRIPTS_DIR=.bluemix/scripts # SCRIPTS_DIR is used in container_build.sh
       source ${SCRIPTS_DIR}/container_build.sh
-      touch new-file.txt
-      echo "new file content" >> new-file.txt
 
       if  [[ -f post_build.sh ]]; then
         chmod +x post_build.sh;

@@ -58,9 +58,9 @@ deploy:
     dev-organization: "{{organization}}"
     dev-region: "{{region}}"
     chart-name: ddcao26sep0910kubejava
-    kube-cluster-name: devex-playground
+    kube-cluster-name: ddcao1sep
     cluster-namespace: default
     api-key: "{{api-key}}"
     image-pull-secret-name: "{{image-pull-secret-name}}"
     image-registry-token: "{{image-registry-token}}"
-    registry-namespace: namespace_joy
+    registry-namespace: my_registry_ns
