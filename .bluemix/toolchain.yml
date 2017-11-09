@@ -53,11 +53,11 @@ deploy:
     $ref: deploy.json
   service-category: pipeline
   parameters:
-    app-name: ddcao-26sep0910-kube-java
+    app-name: dora-09nov-kube-java
     dev-space: "{{space}}"
     dev-organization: "{{organization}}"
     dev-region: "{{region}}"
-    chart-name: ddcao26sep0910kubejava
+    chart-name: dora09novkubejava
     kube-cluster-name: devex-playoungrd
     cluster-namespace: default
     api-key: "{{api-key}}"
