@@ -6,7 +6,7 @@ required:
  - repo
 
 toolchain:
-  name: ddcao-26sep0910-kube-java
+  name: dora-09nov-kube-java
 
 # Github repos
 repo:
