@@ -6,7 +6,7 @@ required:
  - repo
 
 toolchain:
-  name: dora-09nov-kube-java
+  name: ddcao-java-services-local
 
 # Github repos
 repo:
@@ -53,14 +53,14 @@ deploy:
     $ref: deploy.json
   service-category: pipeline
   parameters:
-    app-name: dora-09nov-kube-java
+    app-name: ddcao-java-services-local
     dev-space: "{{space}}"
     dev-organization: "{{organization}}"
     dev-region: "{{region}}"
-    chart-name: dora09novkubejava
+    chart-name: ddcaojavaserviceslocal
     kube-cluster-name: devex-playground
     cluster-namespace: default
     api-key: "{{api-key}}"
     image-pull-secret-name: "{{image-pull-secret-name}}"
     image-registry-token: "{{image-registry-token}}"
-    registry-namespace: namespace_joy
+    registry-namespace: my_registry_ns

@@ -2,5 +2,5 @@
 
 @Library('MicroserviceBuilder') _
 microserviceBuilderPipeline {
-  image = 'ddcao26sep0910kubejava'
+  image = 'ddcao-java-services-local'
 }
