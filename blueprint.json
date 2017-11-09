@@ -1,58 +1,43 @@
 {
-  "name": "MyStarterKit",
-  "description": "This is one amazing StarterKit",
-  "thumbnailURL": "blueprint/thumbnail.svg",
-  "appIconURL": "blueprint/appicon.svg",
-  "previewURLs": [],
-  "type": "WEB",
-  "tags": [],
-  "checklist": [
+  "backendPlatform": "JAVA",
+  "cloudant": [
     {
-      "label": "Do this",
-      "link": "https://ibm.com"
-    },
-    {
-      "label": "Do that",
-      "link": "https://ibm.com"
+      "password": "cloudant-password",
+      "serviceInfo": {
+        "label": "cloudantNoSQLDB",
+        "name": "ddcao24sep1516kube-cloudantno-1506291491428",
+        "plan": "cloudant-plan"
+      },
+      "url": "https://account.cloudant.com",
+      "username": "cloudant-username"
     }
   ],
-  "generators": {
-    "node": [
-      "generator-ibm-core-node-express",
-      "generator-ibm-cloud-enablement",
-      "generator-ibm-service-enablement",
-      "generator-usecase-enablement"
-    ],
-    "python": [
-      "generator-core-python-flask",
-      "generator-ibm-cloud-enablement",
-      "generator-ibm-service-enablement",
-      "generator-usecase-enablement"
-    ]
+  "documentConversion": {
+    "password": "document-conversion-password",
+    "serviceInfo": {
+      "label": "document_conversion",
+      "name": "ddcao24sep1516kube-document-c-1506291426939",
+      "plan": "document-conversion-plan"
+    },
+    "url": "https://gateway.watsonplatform.net/document-conversion/api",
+    "username": "document-conversion-username"
   },
-  "generatorOptions": {
-    "generator-ibm-core-node-express": {
-      "version": "latest"
+  "name": "ddcao-26sep0910-kube-java",
+  "server": {
+    "cloudDeploymentOptions": {
+      "kubeClusterName": "ddcao1sep",
+      "kubeClusterNamespace": "default"
     },
-    "generator-core-python-flask": {
-      "registry": "https://npm-registry.whitewater.ibm.com",
-      "scope": "@arf",
-      "version": "latest"
-    },
-    "generator-ibm-service-enablement": {
-      "version": "latest"
-    },
-    "generator-ibm-cloud-enablement": {
-      "version": "latest"
-    },
-    "generator-usecase-enablement": {
-      "registry": "https://npm-registry.whitewater.ibm.com",
-      "scope": "@arf",
-      "version": "latest"
-    }
-  },
-  "requiredCapabilities": [],
-  "requiredCapabilitiesURLs": {},
-  "servicePlans": {},
-  "email": "cloud@us.ibm.com"
+    "cloudDeploymentType": "Kube",
+    "diskQuota": "512MB",
+    "domain": "mybluemix.net",
+    "env": {},
+    "host": "ddcao-26sep0910-kube-java",
+    "instances": 1,
+    "memory": "512MB",
+    "name": "ddcao-26sep0910-kube-java",
+    "organization": "ddcao@us.ibm.com",
+    "services": [],
+    "space": "dev"
+  }
 }

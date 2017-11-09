@@ -1,5 +1,5 @@
 {
-  "backendPlatform": "SWIFT",
+  "backendPlatform": "JAVA",
   "cloudant": [
     {
       "password": "cloudant-password",

@@ -3,20 +3,18 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: registry.mybluemix.net/replace-me-namespace/ddcao26sep0910kubejava
+  repository: ddcao26sep0910kubejava
   tag: v1.0.0
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   resources:
     requests:
       cpu: 200m
       memory: 300Mi
-livenessProbe:
-  initialDelaySeconds: 3000
-  periodSeconds: 1000
 service:
   name: Node
   type: NodePort
-  servicePort: 8080
+  servicePort: 9080
+  servicePortHttps: 9443
 hpa:
   enabled: false
   minReplicas: 1
@@ -27,3 +25,12 @@ hpa:
     memory:
       targetAverageUtilization: 70
 services:
+base:
+  enabled: false
+  replicaCount: 1
+  image:
+    tag : v0.9.9
+  weight: 100
+istio:
+  enabled: false
+  weight: 100
